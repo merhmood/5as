@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
+import { pageMeta } from "../_seo";
 import Cta from "../_components/Cta";
 import PageHero from "../_components/PageHero";
 import { steps, whyOnePartner } from "../_content";
 
-export const metadata: Metadata = { title: "Process" };
+export const metadata: Metadata = pageMeta(
+  "Our Process: Six Steps, One Plan",
+  "From discovery and planning to delivery, handover and long-term support, every 5As project follows the same disciplined path.",
+  "/process",
+);
 
 export default function Process() {
   return (

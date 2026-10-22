@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
+import { pageMeta } from "../_seo";
 import Cta from "../_components/Cta";
 import PageHero from "../_components/PageHero";
 import Rows from "../_components/Rows";
 import { sectors } from "../_content";
 
-export const metadata: Metadata = { title: "Sectors" };
+export const metadata: Metadata = pageMeta(
+  "Sectors We Serve",
+  "Commercial, property, industrial, healthcare, education and residential clients that need power, networks and premises to work together.",
+  "/sectors",
+);
 
 export default function Sectors() {
   return (

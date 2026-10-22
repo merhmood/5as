@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
+import { pageMeta } from "../_seo";
 import Image from "next/image";
 import Cta from "../_components/Cta";
 import PageHero from "../_components/PageHero";
 import { divisions } from "../_content";
 
-export const metadata: Metadata = { title: "Services" };
+export const metadata: Metadata = pageMeta(
+  "Services: Construction, Electrical Power, IT & Healthcare Technology",
+  "Four disciplines under one team: construction and general contracting, electrical and critical power, IT and smart systems, and healthcare technology.",
+  "/services",
+);
 
 const images = ["/img/construction.jpg", "/img/solar.jpg", "/img/servers.jpg", "/img/clinic.jpg"];
 

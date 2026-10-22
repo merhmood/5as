@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { contact, nav } from "../_content";
 import FooterDate from "./FooterDate";
@@ -7,7 +8,10 @@ export default function Footer() {
     <footer className="border-t border-white/10 bg-ink">
       <div className="wrap grid gap-12 py-16 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <p className="text-5xl font-semibold tracking-tight">5As</p>
+          <p className="flex items-center gap-2 text-6xl font-semibold tracking-tight" aria-label="5As">
+            <Image src="/logo-mark.png" alt="" width={220} height={299} className="h-20 w-auto" />
+            <span aria-hidden>As</span>
+          </p>
           <p className="eyebrow mt-4 leading-7 text-white/50">
             Build · Power · Connect · Automate
             <br />

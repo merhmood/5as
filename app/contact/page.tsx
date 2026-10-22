@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
+import { pageMeta } from "../_seo";
 import PageHero from "../_components/PageHero";
 import { contact } from "../_content";
 
-export const metadata: Metadata = { title: "Contact" };
+export const metadata: Metadata = pageMeta(
+  "Contact 5As in Lokoja, Kogi State",
+  "Plan a fit-out, power upgrade, network, smart facility or healthcare technology project with 5As. Call, email or visit our Lokoja office.",
+  "/contact",
+);
 
 export default function Contact() {
   return (

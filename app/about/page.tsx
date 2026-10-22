@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
+import { pageMeta } from "../_seo";
 import Cta from "../_components/Cta";
 import PageHero from "../_components/PageHero";
 import Rows from "../_components/Rows";
 import { reasons, values } from "../_content";
 
-export const metadata: Metadata = { title: "About" };
+export const metadata: Metadata = pageMeta(
+  "Who We Are: Integrated Construction, Power & IT",
+  "5As is the single partner behind the structure, power and technology that keep modern facilities running: one plan, one team, one point of accountability.",
+  "/about",
+);
 
 export default function About() {
   return (

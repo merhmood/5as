@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
+import { pageMeta } from "../_seo";
 import Cta from "../_components/Cta";
 import PageHero from "../_components/PageHero";
 import { clinicSteps } from "../_content";
 
-export const metadata: Metadata = { title: "Healthcare" };
+export const metadata: Metadata = pageMeta(
+  "Healthcare Technology & Medical Systems",
+  "Facility, power, connectivity and clinical software delivered as one project for hospitals, clinics, laboratories and diagnostic centres.",
+  "/healthcare",
+);
 
 export default function Healthcare() {
   return (
