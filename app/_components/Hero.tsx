@@ -72,7 +72,7 @@ export default function Hero() {
 
       <div className="wrap w-full pb-14 pt-32 md:pb-20">
         <div key={index} className="hero-slide min-h-[22rem] md:min-h-[26rem]">
-          <p className="eyebrow text-amber">{slide.tag}</p>
+          <p className="eyebrow tech-label text-amber">{slide.tag}</p>
           <h1 className="display tech mt-5 max-w-5xl text-[clamp(2.4rem,7.4vw,6.2rem)]">
             <Typewriter text={`${slide.title[0]}
 ${slide.title[1]}`} speed={45} delay={250} />

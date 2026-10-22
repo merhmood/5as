@@ -55,6 +55,13 @@ body {
   text-transform: uppercase;
 }
 
+.tech-label {
+  font-family: var(--font-tech);
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+}
+
 .wrap {
   margin-inline: auto;
   max-width: 76rem;

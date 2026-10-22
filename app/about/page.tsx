@@ -38,7 +38,7 @@ export default function About() {
           </div>
           <div>
             <p className="eyebrow text-amber">Our core promise</p>
-            <p className="display mt-3 text-3xl">Build. Power. Connect. Automate.</p>
+            <p className="display tech mt-3 text-2xl md:text-3xl">Build. Power. Connect. Automate.</p>
           </div>
           <div>
             <p className="eyebrow text-amber">Our positioning</p>

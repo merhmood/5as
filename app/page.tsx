@@ -41,7 +41,7 @@ export default function Home() {
                 <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink/90 via-ink/20 to-transparent" />
                 <span className="eyebrow text-white/60">{n}</span>
                 <div>
-                  <h2 className="display text-5xl">{word}</h2>
+                  <h2 className="display tech text-4xl md:text-5xl">{word}</h2>
                   <p className="mt-3 text-white/70">{desc}</p>
                 </div>
               </Link>

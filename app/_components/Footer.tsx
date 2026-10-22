@@ -12,7 +12,7 @@ export default function Footer() {
             <Image src="/logo-mark.png" alt="" width={220} height={299} className="h-20 w-auto" />
             <span aria-hidden>As</span>
           </p>
-          <p className="eyebrow mt-4 leading-7 text-white/50">
+          <p className="eyebrow tech-label mt-4 leading-7 text-white/50">
             Build · Power · Connect · Automate
             <br />
             <span className="text-amber">One partner. Every system.</span>

@@ -76,7 +76,7 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-        <p className="eyebrow text-white/50">Build · Power · Connect · Automate</p>
+        <p className="eyebrow tech-label text-white/50">Build · Power · Connect · Automate</p>
       </div>
     </>
   );
