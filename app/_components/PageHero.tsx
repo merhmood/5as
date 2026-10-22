@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Typewriter from "./Typewriter";
 
 export default function PageHero({
   eyebrow,
@@ -16,7 +17,7 @@ export default function PageHero({
       <div className="wrap grid items-center gap-10 py-14 md:py-20 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
         <div>
           <p className="eyebrow text-amber">{eyebrow}</p>
-          <h1 className="display mt-5 text-[clamp(2.6rem,6.5vw,5.5rem)]">{title}</h1>
+          <h1 className="display tech mt-5 text-[clamp(2.1rem,5.2vw,4.5rem)]"><Typewriter text={title} speed={45} delay={200} /></h1>
           {intro && <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/70">{intro}</p>}
         </div>
         <div className="relative aspect-[4/3] overflow-hidden">

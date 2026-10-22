@@ -40,7 +40,7 @@ export default function BenefitsSlider() {
       <div className="wrap flex flex-wrap items-end justify-between gap-6">
         <div>
           <p className="eyebrow text-amber">Why clients choose 5As</p>
-          <h2 className="display mt-4 max-w-2xl text-[clamp(2rem,4.5vw,3.5rem)]">
+          <h2 className="display tech mt-4 max-w-2xl text-[clamp(1.7rem,3.8vw,3rem)]">
             The benefits of one partner for every system.
           </h2>
         </div>

@@ -20,6 +20,7 @@
   --color-amber: var(--amber);
   --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+  --font-tech: var(--font-chakra), var(--font-inter), sans-serif;
 }
 
 html {
@@ -37,6 +38,14 @@ body {
   font-weight: 500;
   line-height: 0.98;
   letter-spacing: -0.035em;
+}
+
+.tech {
+  font-family: var(--font-tech);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: -0.005em;
+  line-height: 1.02;
 }
 
 .eyebrow {
@@ -142,5 +151,31 @@ body {
   }
   .benefit-track {
     animation: none;
+  }
+}
+
+.tw-caret {
+  display: inline-block;
+  width: 0;
+  height: 0.85em;
+  margin-right: -0.07em;
+  border-right: 0.07em solid var(--amber);
+  vertical-align: -0.05em;
+  animation: tw-blink 0.9s steps(1) infinite;
+}
+
+.tw-caret-done {
+  animation: tw-blink 0.9s steps(1) 2, tw-gone 0.1s 1.8s forwards;
+}
+
+@keyframes tw-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes tw-gone {
+  to {
+    opacity: 0;
   }
 }

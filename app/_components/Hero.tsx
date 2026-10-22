@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Typewriter from "./Typewriter";
 import { useEffect, useRef, useState } from "react";
 
 const slides = [
@@ -72,10 +73,9 @@ export default function Hero() {
       <div className="wrap w-full pb-14 pt-32 md:pb-20">
         <div key={index} className="hero-slide min-h-[22rem] md:min-h-[26rem]">
           <p className="eyebrow text-amber">{slide.tag}</p>
-          <h1 className="display mt-5 max-w-5xl text-[clamp(3rem,9vw,7.5rem)]">
-            {slide.title[0]}
-            <br />
-            {slide.title[1]}
+          <h1 className="display tech mt-5 max-w-5xl text-[clamp(2.4rem,7.4vw,6.2rem)]">
+            <Typewriter text={`${slide.title[0]}
+${slide.title[1]}`} speed={45} delay={250} />
           </h1>
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-white/75">{slide.body}</p>
           <div className="mt-9 flex flex-wrap gap-4">

@@ -3,6 +3,7 @@ import Link from "next/link";
 import BenefitsSlider from "./_components/BenefitsSlider";
 import Cta from "./_components/Cta";
 import Hero from "./_components/Hero";
+import Typewriter from "./_components/Typewriter";
 import { whyOnePartner } from "./_content";
 
 const cards = [
@@ -20,7 +21,10 @@ export default function Home() {
       <section className="wrap py-20 md:py-28">
         <p className="eyebrow text-white/50">Who we are</p>
         <p className="display mt-6 max-w-4xl text-[clamp(1.8rem,4vw,3.2rem)]">
-          Most building projects juggle separate contractors for the structure, the power and the technology. 5As brings them together, under one plan, one team and one point of accountability.
+          <Typewriter
+            text="Most building projects juggle separate contractors for the structure, the power and the technology. 5As brings them together, under one plan, one team and one point of accountability."
+            speed={16}
+          />
         </p>
         <Link href="/about" className="eyebrow mt-8 inline-block border-b border-white/40 pb-1 hover:border-amber hover:text-amber">
           About 5As

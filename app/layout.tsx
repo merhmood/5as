@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
-import { Inter, IBM_Plex_Mono } from "next/font/google";
+import { Chakra_Petch, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 import { siteName, siteUrl } from "./_seo";
+
+const tech = Chakra_Petch({
+  variable: "--font-chakra",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+});
 
 const sans = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const mono = IBM_Plex_Mono({
@@ -54,7 +60,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" className={`${sans.variable} ${mono.variable} antialiased`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${sans.variable} ${mono.variable} ${tech.variable} antialiased`}>
       <body suppressHydrationWarning>
         <Header />
         <main>{children}</main>
