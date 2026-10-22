@@ -22,7 +22,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink">
+      <header className="fixed inset-x-0 top-0 z-[60] border-b border-white/10 bg-ink">
         <div className="wrap flex h-16 items-center justify-between">
           <Link href="/" className="relative z-[60] flex items-center gap-1 text-2xl font-semibold tracking-tight" aria-label="5As home">
             <Image src="/logo-mark.png" alt="" width={220} height={299} priority className="h-10 w-auto" />

@@ -111,3 +111,36 @@ body {
     animation: none;
   }
 }
+
+.benefit-card {
+  clip-path: polygon(0 0, calc(100% - 44px) 0, 100% 44px, 100% 100%, 0 100%);
+}
+
+.benefit-marquee {
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+}
+
+.benefit-track {
+  animation: benefit-scroll 70s linear infinite;
+}
+
+.benefit-marquee:hover .benefit-track,
+.benefit-track.is-paused {
+  animation-play-state: paused;
+}
+
+@keyframes benefit-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .benefit-marquee {
+    overflow-x: auto;
+  }
+  .benefit-track {
+    animation: none;
+  }
+}

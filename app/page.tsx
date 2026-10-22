@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import BenefitsSlider from "./_components/BenefitsSlider";
 import Cta from "./_components/Cta";
 import Hero from "./_components/Hero";
 import { whyOnePartner } from "./_content";
@@ -44,6 +45,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <BenefitsSlider />
 
       <section className="light">
         <div className="wrap grid gap-12 py-24 md:grid-cols-2">
