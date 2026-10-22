@@ -1,26 +1,113 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ink: #0a0b0d;
+  --ink-2: #14161a;
+  --line: #2a2d33;
+  --paper: #ffffff;
+  --paper-2: #f2f2f0;
+  --muted: #8b8f98;
+  --amber: #e3a11a;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-line: var(--line);
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-muted: var(--muted);
+  --color-amber: var(--amber);
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-sans);
+}
+
+.display {
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.wrap {
+  margin-inline: auto;
+  max-width: 76rem;
+  padding-inline: 1.25rem;
+}
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 1rem 1.5rem;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.btn-solid {
+  background: var(--paper);
+  color: var(--ink);
+}
+.btn-solid:hover {
+  background: var(--amber);
+}
+.btn-line {
+  border: 1px solid rgb(255 255 255 / 0.35);
+}
+.btn-line:hover {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+.light {
+  background: var(--paper);
+  color: var(--ink);
+}
+.light .muted {
+  color: #5b5f67;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.hero-slide {
+  animation: hero-in 0.7s ease both;
+}
+
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide {
+    animation: none;
+  }
 }
