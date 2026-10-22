@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { contact, nav } from "../_content";
+import FooterDate from "./FooterDate";
 
 export default function Footer() {
   return (
@@ -40,7 +41,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="wrap border-t border-white/10 py-6">
-        <p className="eyebrow text-white/40">5As. Photography via Pexels.</p>
+        <FooterDate />
       </div>
     </footer>
   );

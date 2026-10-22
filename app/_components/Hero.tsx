@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const slides = [
   {
@@ -32,30 +32,16 @@ const slides = [
 ] as const;
 
 const INTERVAL_MS = 5500;
-const reducedQuery = "(prefers-reduced-motion: reduce)";
-
-function useReducedMotion() {
-  return useSyncExternalStore(
-    (cb) => {
-      const mq = window.matchMedia(reducedQuery);
-      mq.addEventListener("change", cb);
-      return () => mq.removeEventListener("change", cb);
-    },
-    () => window.matchMedia(reducedQuery).matches,
-    () => false,
-  );
-}
-
 export default function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [userPaused, setUserPaused] = useState(false);
   const [index, setIndex] = useState(0);
-  const reduced = useReducedMotion();
-  const playing = !userPaused && !reduced;
+  const playing = !userPaused;
 
   useEffect(() => {
     const v = videoRef.current;
     if (!v) return;
+    v.muted = true;
     if (playing) v.play().catch(() => setUserPaused(true));
     else v.pause();
   }, [playing]);
@@ -74,7 +60,7 @@ export default function Hero() {
         ref={videoRef}
         className="absolute inset-0 -z-20 h-full w-full object-cover opacity-70"
         src="/hero.mp4"
-        autoPlay={!reduced}
+        autoPlay
         muted
         loop
         playsInline
